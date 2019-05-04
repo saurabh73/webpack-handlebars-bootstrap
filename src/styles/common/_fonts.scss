@@ -1,9 +1,9 @@
 /* 
  Font mixin usage
 
-  @include font-face(OpenSans, "../fonts/OpenSans-Light", 300, normal, ttf);
-  @include font-face(OpenSans, "../fonts/OpenSans-Regular", normal, normal, ttf);
-  @include font-face(OpenSans, "../fonts/OpenSans-Medium", 500, normal, ttf);
-  @include font-face(OpenSans, "../fonts/OpenSans-Bold", bold, normal, ttf);
+ @include font-face("Ubuntu","#{$font-path}/ubuntu/Ubuntu-Bold", ("eot","woff2","woff","ttf","svg")){
+    font-weight: 700;
+    font-style: normal;
+ }
   
  */
