@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "A clean Webpack 4 + Bootstrap 4 + Handlebars frontend template.",
 	"scripts": {
-		"start": "nodemon --exec npm run watch --watch src/pages.js",
+		"start": "npm run watch",
 		"build": "webpack --config webpack-prod.config.js --colors --optimize-minimize",
 		"watch": "webpack-dev-server --config webpack-dev.config.js --watch --colors -d"
 	},

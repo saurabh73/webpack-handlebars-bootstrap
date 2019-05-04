@@ -1,9 +1,4 @@
-/* 
-
-    $icon-font-family: "icnmoon-icon" !default;
-
-    $icon-logo: "\e900";
-    $icon-arrow: "\e901";
+/** 
 
     @include font-face($icon-font-family, "#{$font-path}/icons/#{$icon-font-family}", ("ttf", "eot", "woff", "svg")) {
         font-style: normal;
@@ -37,4 +32,4 @@
 	    }
     }
  
-*/
+**/

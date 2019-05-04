@@ -9,7 +9,6 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const ExtractSASS = new ExtractTextPlugin("./[name].[hash].css");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 
 const PATHS = {
 	src: Path.join(__dirname, "src"),
@@ -159,32 +158,11 @@ module.exports = (options) => {
 			compress: options.isProduction,
 			inline: !options.isProduction,
 			hot: !options.isProduction,
+			watchContentBase: !options.isProduction,
 			stats: {
 				chunks: false
 			}
 		};
-
-		// webpackConfig.plugins.push(
-		// 	new BrowserSyncPlugin({
-		// 		host: "localhost",
-		// 		port: 3001,
-		// 		proxy: "http://localhost:8081/",
-		// 		files: [{
-		// 			match: [
-		// 				"**/*.hbs"
-		// 			],
-		// 			fn: function (event, file) {
-		// 				if (event === "change" || event === "add" || event === "unlink") {
-		// 					const bs = require("browser-sync").get("bs-webpack-plugin");
-		// 					bs.reload();
-		// 				}
-		// 			}
-		// 		}]
-		// 	}, {
-		// 		reload: false
-		// 	})
-		// );
-
 	}
 
 	webpackConfig.plugins = webpackConfig.plugins.concat(renderedPages);
